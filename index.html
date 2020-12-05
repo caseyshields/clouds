@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Color Picker</title>
+        <title>Clouds</title>
         <script src="../d3/d3.min.js"></script>
         <style>
             body {
@@ -32,10 +32,54 @@
                 top: -320px;
                 left: -320px;
             }
+            * {
+                font-style: bold, italic;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                color:#ffee96;
+            }
+            h1 {
+                text-shadow: #f57536 0.25em 0.25em;
+            }
+            h2 {
+                text-shadow: #f57536 0.125em 0.125em;
+            }
+            ul {}
         </style>
     </head>
     <body>
         <div id="cloud-circle"></div>
+        <header>
+            <h1>Benjamin J. Shields:</h1>
+            <h2>Pilot Instructor</h2>
+        </header>
+        
+        <section>
+            <h2>Mission</h2>
+            I'm here to kick ass and chew bubble-gum. And I'm fresh out of bubble-gum.
+        </section>
+        
+        <section>
+        <h2>Certifications</h2>
+        <ul>
+            <li>Instrument</li>
+            <li>Multi-engine</li>
+            <li>Kessel Run in 11 parsecs</li>
+            <li>Do a barrel Roll</li>
+        </ul>
+        </section>
+
+        <section>
+            <h2>Contact</h2>
+            Journey to the hidden swamps of Alabama.<br>
+            Befriend the sapient reptiles there and learn their secret ways.<br>
+            They will gift you a dagger whose profile aligns with a specific mountainous silhouette in Georgia.<br>
+            When you match the blade against the westering sky he will land a bushplane beside you.<br>
+            Or if convenience is not your thing, his fax number is 1298975981249987e103. <br>
+        </section>
+        <footer>
+
+        </footer>
+
         <svg width="0" height="0"> 
             <filter id="filter">
                 <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="5" seed="3"/>
