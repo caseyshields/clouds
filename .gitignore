@@ -1,0 +1,10 @@
+# ignore vscode files
+/.vs
+
+# Ignore 3rd party libraries
+/d3
+
+# ignore express server
+server.js
+package-lock.json
+/node_modules

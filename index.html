@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Color Picker</title>
+        <script src="../d3/d3.min.js"></script>
+        <style>
+            body {
+                width: 100vw;
+                height: 100vh;
+                background: linear-gradient(180deg,
+                    #2d282e 0%,
+                    #215c9a 20%,
+                    #2791d5 30%,
+                    #4fa7e2 50%,
+                    #f3f5f9 60%,
+                    #f5f7f7 80%,
+                    #ffee96 85%,
+                    #f6b65e 90%,
+                    #f57536 95%,
+                    #2d282e 100%
+                );
+            }
+            #cloud-circle {
+                background: coral;
+                border-radius: 50%;
+                box-shadow: 400px 400px 50px 0px #FFF;
+                width: 400px;
+                height: 180px;
+                filter: url(#filter);
+                position: absolute;
+                top: -320px;
+                left: -320px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="cloud-circle"></div>
+        <svg width="0" height="0"> 
+            <filter id="filter">
+                <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="5" seed="3"/>
+                <feDisplacementMap in="SourceGraphic" scale="100" />
+            </filter>
+        </svg>
+        
+        <script type="module">
+            //
+        </script>
+    </body>
+</html>
