@@ -5,9 +5,38 @@
         <title>Clouds</title>
         <script src="../d3/d3.min.js"></script>
         <style>
+            main {
+                /* thanks jrl.ninja */
+                max-width: 38rem;
+                padding: 2rem;
+                margin: auto;
+                padding-bottom: 0;
+
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                color:#ffee96;
+            }
+            header {
+                position: sticky;
+                top: 0;
+                right: 0;
+                margin-bottom: 10em;
+            }
+            footer {
+                overflow: hidden;
+            }
+            h1 {
+                font-style: bold, italic;
+                text-shadow: #f57536 1px 1px, #f57536 2px 2px, #f57536 3px 3px, #f57536 4px 4px;
+                font-size: 3em;
+                z-index: 100;
+            }
+            h2 {
+                font-style: italic;
+                text-shadow: #f57536 1px 1px, #f57536 2px 2px;
+                z-index: 100;
+            }
             body {
-                width: 100vw;
-                height: 100vh;
+                /* width: 100vw; */
                 background: linear-gradient(180deg,
                     #2d282e 0%,
                     #215c9a 20%,
@@ -21,11 +50,6 @@
                     #2d282e 100%
                 );
             }
-            main {
-                max-width: 38rem;
-                padding: 2rem;
-                margin: auto;
-            }/* thanks jrl.ninja */
             
             .cloud {
                 border-radius: 50%;
@@ -34,6 +58,7 @@
                 position: absolute;
                 top: -320px;
                 left: -320px;
+                z-index: 0;
             }
             .light {
                 box-shadow: 400px 400px 30px 1px #FFF;
@@ -47,37 +72,41 @@
                 box-shadow: 400px 470px 30px -80px #FFF7;
                 filter: url(#cloud-dark);
             }
-            .silhouette {
-                width: 80vw;
+
+            .flying {
+                width: 40vw;
                 height: auto;
                 position: absolute;
-                top: 0;
-                bottom: 0;
+                right: 20vw;
+                top: 20vw;
             }
-            * {
-                font-style: bold, italic;
-                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-                color:#ffee96;
-            }
-            header {
-                position: sticky;
-                top: 0;
+            .landed {
+                width: 80vw;
+                height: auto;
+                /* position: sticky;
                 right: 0;
-                margin-bottom: 10em;
+                top: 70vh; */
+                position: relative;
+                right: -15vw;
+                bottom: -5vh;
             }
-            h1 {
-                text-shadow: #f57536 1px 1px, #f57536 2px 2px, #f57536 3px 3px, #f57536 4px 4px;
-                font-size: 3em;
-                z-index: 100;
-            }
-            h2 {
-                text-shadow: #f57536 1px 1px, #f57536 2px 2px;
-                z-index: 100;
-            }
-            ul {}
+
         </style>
     </head>
+    
+    <div class="cloud light"></div>
+    <div class="cloud dim"></div>
+    <div class="cloud dark"></div>
+
     <main>
+
+        <header>
+            <h1>Benjamin J. Shields:</h1>
+            <h2>Pilot Instructor</h2>
+        </header>
+        
+        <image class="flying" src="plane.svg"></image>
+
         <svg width="0" height="0"> 
             <filter id="cloud-light">
                 <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="5" seed="3"/>
@@ -92,16 +121,7 @@
                 <feDisplacementMap in="SourceGraphic" scale="100" />
             </filter>
         </svg>
-
-        <div class="cloud light"></div>
-        <div class="cloud dim"></div>
-        <div class="cloud dark"></div>
-        <image class="silhouette" src="plane.svg"></image>
-
-        <header>
-            <h1>Benjamin J. Shields:</h1>
-            <h2>Pilot Instructor</h2>
-        </header>
+        
         <section>
             <h2>Mission</h2>
             I'm here to kick ass and chew bubble-gum. And I'm fresh out of bubble-gum.
@@ -124,13 +144,14 @@
             They will gift you a dagger whose profile aligns with a specific mountain range in Georgia.<br>
             When you match the blade against the silhouette of the westering sky, he will land a bushplane beside you.<br>
         </section>
-
-        <footer>
-
-        </footer>
-        
-        <script type="module">
-            //
-        </script>
     </main>
+
+    <footer>
+        
+    </footer>
+    <image class="landed" src="plane.svg" ></image>
+    
+    <script type="module">
+        //
+    </script>
 </html>
