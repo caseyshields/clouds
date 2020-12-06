@@ -12,3 +12,8 @@ Thinking about simulating atmospheric scattering by altitude as you scroll; as i
  - https://www.scratchapixel.com/lessons/procedural-generation-virtual-worlds/simulating-sky
 
 I'm thinking I want a silhouette of the plane against the sunset as you reach the bottom of the page.
+
+I need to keep the text from going into different atmospheric color bands.
+I could do this by making a gradient div for each band and stacking them. then they could grow with content independently and the appropriate foreground color could be chosen for them.
+
+Unfortunately this precludes the ability to programatically alter bands by altitude as you scroll.
