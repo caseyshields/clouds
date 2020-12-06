@@ -8,9 +8,14 @@ The clouds are inspired by this cool [article](https://css-tricks.com/drawing-re
 
  - Add more clouds, infront and behind the main logo so the logo plunges through when you scroll....
 
+ - use a radial gradient for a bit more natural appearance?
+
  - Make the clouds move? Maybe drift horizontally slowly? A bit of vertical parallax when scrolling?
 
  - I need to trace some more planes, instead of re-using the piper cub...
+   - Piper Cub PA28-181 Archer 
+   - Piper Cub PA-44 Seminole
+   - Cessna 172 S Model Skyhawk 
 
  - Align the plane tire below the ground gradient- it looks like it's floating...
 

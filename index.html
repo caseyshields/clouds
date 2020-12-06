@@ -13,6 +13,7 @@
                 padding-bottom: 0;
 
                 font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                /* font-family: bahnschrift; */
                 color:#ffee96;
             }
             header {
@@ -83,72 +84,79 @@
             .landed {
                 width: 80vw;
                 height: auto;
-                /* position: sticky;
-                right: 0;
-                top: 70vh; */
                 position: relative;
                 right: -15vw;
-                bottom: -5vh;
+                bottom: -4vh;
             }
 
         </style>
     </head>
-    
+
+    <svg width="0" height="0"> 
+        <filter id="cloud-light">
+            <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="5" seed="3"/>
+            <feDisplacementMap in="SourceGraphic" scale="170" />
+        </filter>
+        <filter id="cloud-dim">
+            <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="3" seed="3"/>
+            <feDisplacementMap in="SourceGraphic" scale="150" />
+        </filter>
+        <filter id="cloud-dark">
+            <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="2" seed="3"/>
+            <feDisplacementMap in="SourceGraphic" scale="100" />
+        </filter>
+    </svg>
     <div class="cloud light"></div>
     <div class="cloud dim"></div>
     <div class="cloud dark"></div>
 
     <main>
-
         <header>
-            <h1>Benjamin J. Shields:</h1>
-            <h2>Pilot Instructor</h2>
+            <h1>Ben Shields</h1>
+            <h2>Flight Instructor</h2>
         </header>
         
         <image class="flying" src="plane.svg"></image>
-
-        <svg width="0" height="0"> 
-            <filter id="cloud-light">
-                <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="5" seed="3"/>
-                <feDisplacementMap in="SourceGraphic" scale="170" />
-            </filter>
-            <filter id="cloud-dim">
-                <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="3" seed="3"/>
-                <feDisplacementMap in="SourceGraphic" scale="150" />
-            </filter>
-            <filter id="cloud-dark">
-                <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="2" seed="3"/>
-                <feDisplacementMap in="SourceGraphic" scale="100" />
-            </filter>
-        </svg>
         
         <section>
             <h2>Mission</h2>
             I'm here to kick ass and chew bubble-gum. And I'm fresh out of bubble-gum.
+
+            <p>Avaition Enthusiast</p>
+
+            <p>"I love flying and want to more people to experience it safely"</p>
         </section>
         
         <section>
-        <h2>Certifications</h2>
-        <ul>
-            <li>Instrument</li>
-            <li>Multi-engine</li>
-            <li>Kessel Run in 11 parsecs</li>
-            <li>Do a barrel Roll</li>
-        </ul>
+            <h2>Certifications</h2>
+            <ul>
+                <li>Commercial Pilot</li>
+                <li>Instrument Rated</li>
+                <li>Multi-Engine Rated</li>
+                <li>CFI Certified Flight Instructor</li>
+                <li>CFII Certified Flight Instrument Instructor</li>
+                <li>MEI Multi-Engine Instructor</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Home Airport</h2>
+            <p>TODO embed open map directions or something...</p>
         </section>
 
         <section>
             <h2>Contact</h2>
-            Journey to the hidden swamps of Alabama.<br>
-            Befriend the sapient reptiles there and learn their secret ways.<br>
-            They will gift you a dagger whose profile aligns with a specific mountain range in Georgia.<br>
-            When you match the blade against the silhouette of the westering sky, he will land a bushplane beside you.<br>
+            <ul>
+                <li>TODO business phone, google number?</li>
+                <li>TODO business email</li>
+            </ul>
         </section>
     </main>
 
     <footer>
         
     </footer>
+
     <image class="landed" src="plane.svg" ></image>
     
     <script type="module">
