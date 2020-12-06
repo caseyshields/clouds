@@ -47,17 +47,32 @@
                 box-shadow: 400px 470px 30px -80px #FFF7;
                 filter: url(#cloud-dark);
             }
+            .silhouette {
+                width: 80vw;
+                height: auto;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+            }
             * {
                 font-style: bold, italic;
                 font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
                 color:#ffee96;
             }
+            header {
+                position: sticky;
+                top: 0;
+                right: 0;
+                margin-bottom: 10em;
+            }
             h1 {
                 text-shadow: #f57536 1px 1px, #f57536 2px 2px, #f57536 3px 3px, #f57536 4px 4px;
                 font-size: 3em;
+                z-index: 100;
             }
             h2 {
                 text-shadow: #f57536 1px 1px, #f57536 2px 2px;
+                z-index: 100;
             }
             ul {}
         </style>
@@ -81,6 +96,7 @@
         <div class="cloud light"></div>
         <div class="cloud dim"></div>
         <div class="cloud dark"></div>
+        <image class="silhouette" src="plane.svg"></image>
 
         <header>
             <h1>Benjamin J. Shields:</h1>
