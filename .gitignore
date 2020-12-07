@@ -4,6 +4,9 @@
 # Ignore 3rd party libraries
 /d3
 
+#ignore reference images
+/ref
+
 # ignore express server
 server.js
 package-lock.json

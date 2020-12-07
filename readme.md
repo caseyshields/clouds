@@ -2,7 +2,7 @@
 
 Trying out some ideas for a static web page for my brother. I wanted to use [Yuan Chen's single div clouds](https://codepen.io/yuanchuan/pen/f70a1f9435dc90197b253b26b4d69d42) for a nice visual gimmick. For the color scheme I was thinking of something based off atmospheric scattering during sunrise.
 
-The clouds are inspired by this cool [article](https://css-tricks.com/drawing-realistic-clouds-with-svg-and-css/) by Beau Jackson. Probably inconsiderately processor intensive for visitors, but still cool.
+The clouds are inspired by this cool [article](https://css-tricks.com/drawing-realistic-clouds-with-svg-and-css/) by Beau Jackson. Probably inconsiderately processor intensive for visitors, but still cool. https://www.nephele.cloud/
 
 ## todo
 
@@ -25,3 +25,5 @@ The clouds are inspired by this cool [article](https://css-tricks.com/drawing-re
 
 Thinking about simulating atmospheric scattering by altitude as you scroll; as if the pane is taking off...
  - https://www.scratchapixel.com/lessons/procedural-generation-virtual-worlds/simulating-sky
+
+ https://www.faa.gov/licenses_certificates/
