@@ -4,6 +4,10 @@ Trying out some ideas for a static web page for my brother. I wanted to use [Yua
 
 The clouds are inspired by this cool [article](https://css-tricks.com/drawing-realistic-clouds-with-svg-and-css/) by Beau Jackson. Probably inconsiderately processor intensive for visitors, but still cool. https://www.nephele.cloud/
 
+The neat 3d text was from Sarah Fossheim's [article](https://css-tricks.com/creating-playful-effects-with-css-text-shadows/).
+
+
+
 ## todo
 
  - Add more clouds, infront and behind the main logo so the logo plunges through when you scroll....
