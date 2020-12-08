@@ -51,32 +51,46 @@
                     #2d282e 100%
                 );
             }
-            /* .certifications {
-                background-image: url("piper-archer.svg");
-                background-size: 40vw auto;
-            } */
             
             .cloud {
                 border-radius: 50%;
                 width: 50vmin;
                 height: 25vmin;
                 position: absolute;
-                top: 0;
-                left: 0;
+                top: 10vmin;
+                left: -50vmin;
                 z-index: 0;
+                background-color: transparent;
             }
             .light {
-                box-shadow: 50vmin 50vmin 30px 0px #FFF;
+                box-shadow: 100vmin 0vmin 2em 0px #FFF;
                 filter: url(#cloud-light);
+                animation-duration: 20000ms;
+                animation-name: drift;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                /* transition: box-shadow 1000ms; */
+            }
+            /* .light:hover {
+                box-shadow: 100vmin 0vmin 2em 0px #FFF;
+                filter: url(#cloud-light);
+            } */
+            @keyframes drift {
+                from {
+                    box-shadow: 0vmin 0vmin 2em 0px #FFF;
+                }
+                to {
+                    box-shadow: 150vmin 0vmin 2em 0px #FFF;
+                }
             }
             .dim {
-                box-shadow: 50vmin 55vmin 30px -60px #7777;
+                box-shadow: 100vmin 5vmin 2em -60px #7777;
                 filter: url(#cloud-dim);
             }
-            .dark {
-                box-shadow: 50vmin 60vmin 30px -80px #FFF7;
+            /* .dark {
+                box-shadow: 100vmin 10vmin 2em -80px #FFF7;
                 filter: url(#cloud-dark);
-            }
+            } */
 
             .flying {
                 width: 40vw;
@@ -98,20 +112,21 @@
                 bottom: -4vh;
             }
 
+
         </style>
     </head>
 
     <svg width="0" height="0"> 
         <filter id="cloud-light">
-            <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="5" seed="3"/>
+            <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="4" seed="3"/>
             <feDisplacementMap in="SourceGraphic" scale="170" />
         </filter>
         <filter id="cloud-dim">
-            <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="3" seed="3"/>
+            <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="2" seed="3"/>
             <feDisplacementMap in="SourceGraphic" scale="150" />
         </filter>
         <filter id="cloud-dark">
-            <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="2" seed="3"/>
+            <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="1" seed="3"/>
             <feDisplacementMap in="SourceGraphic" scale="100" />
         </filter>
     </svg>
