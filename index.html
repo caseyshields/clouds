@@ -5,6 +5,11 @@
         <title>Clouds</title>
         <script src="../d3/d3.min.js"></script>
         <style>
+            :root {
+                --cloud-size: 40vw;
+                --cloud-period: 30000ms;
+                --cloud-fluffy: 2em;
+            }
             main {
                 /* thanks jrl.ninja */
                 max-width: 38rem;
@@ -50,33 +55,62 @@
                     #f57536 95%,
                     #2d282e 100%
                 );
+                overflow-x: hidden;
             }
-            /* .certifications {
-                background-image: url("piper-archer.svg");
-                background-size: 40vw auto;
-            } */
             
             .cloud {
                 border-radius: 50%;
-                width: 400px;
-                height: 200px;
+                width: var(--cloud-size);
+                height: calc( var(--cloud-size) * 0.5);
                 position: absolute;
-                top: -320px;
-                left: -320px;
+                top: 10vw;
+                /* left: calc( var(--cloud-size) * -1.0); */
+                /*- 100vw ); */
                 z-index: 0;
+                background-color: transparent;
             }
             .light {
-                box-shadow: 400px 400px 30px 1px #FFF;
+                box-shadow: 100vw 0vw 2em 0px #FFF;
                 filter: url(#cloud-light);
+                animation-duration: var(--cloud-period);
+                animation-name: drift;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+            }
+            @keyframes drift {
+                from {
+                    box-shadow: 50vw 0vw 2em 0px #FFF;
+                    left: -50vw;
+                    /* left: calc( var(--cloud-size) * -1.0 ); */
+                }
+                to {
+                    box-shadow: 100vw 0vw 2em 0px #FFF;
+                    left: 0vw;
+                    /* left: calc( 70vw + var(--cloud-size) ); */
+                }
             }
             .dim {
-                box-shadow: 400px 440px 30px -60px #7777;
+                /* box-shadow: 100vw 5vw 2em -60px #7777; */
                 filter: url(#cloud-dim);
+                animation-duration: var(--cloud-period);
+                animation-name: dim-drift;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
             }
-            .dark {
-                box-shadow: 400px 470px 30px -80px #FFF7;
+            @keyframes dim-drift {
+                from {
+                    box-shadow: 50vw 5vw 2em -60px #7777;
+                    left: -50vw;
+                }
+                to {
+                    box-shadow: 100vw 5vw 2em -60px #7777;
+                    left: 0vw
+                }
+            }
+            /* .dark {
+                box-shadow: 100vmin 10vmin 2em -80px #FFF7;
                 filter: url(#cloud-dark);
-            }
+            } */
 
             .flying {
                 width: 40vw;
@@ -98,20 +132,21 @@
                 bottom: -4vh;
             }
 
+
         </style>
     </head>
 
     <svg width="0" height="0"> 
         <filter id="cloud-light">
-            <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="5" seed="3"/>
+            <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="4" seed="3"/>
             <feDisplacementMap in="SourceGraphic" scale="170" />
         </filter>
         <filter id="cloud-dim">
-            <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="3" seed="3"/>
+            <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="2" seed="3"/>
             <feDisplacementMap in="SourceGraphic" scale="150" />
         </filter>
         <filter id="cloud-dark">
-            <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="2" seed="3"/>
+            <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="1" seed="3"/>
             <feDisplacementMap in="SourceGraphic" scale="100" />
         </filter>
     </svg>
