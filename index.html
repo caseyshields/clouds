@@ -69,23 +69,22 @@
                 animation-name: drift;
                 animation-iteration-count: infinite;
                 animation-timing-function: linear;
-                /* transition: box-shadow 1000ms; */
             }
-            /* .light:hover {
-                box-shadow: 100vmin 0vmin 2em 0px #FFF;
-                filter: url(#cloud-light);
-            } */
             @keyframes drift {
-                from {
-                    box-shadow: 0vmin 0vmin 2em 0px #FFF;
-                }
-                to {
-                    box-shadow: 150vmin 0vmin 2em 0px #FFF;
-                }
+                from { box-shadow: 0vmin 0vmin 2em 0px #FFF; }
+                to { box-shadow: 150vmin 0vmin 2em 0px #FFF; }
             }
             .dim {
                 box-shadow: 100vmin 5vmin 2em -60px #7777;
                 filter: url(#cloud-dim);
+                animation-duration: 20000ms;
+                animation-name: dim-drift;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+            }
+            @keyframes dim-drift {
+                from { box-shadow: 0vmin 5vmin 2em -60px #7777; }
+                to { box-shadow: 150vmin 5vmin 2em -60px #7777; }
             }
             /* .dark {
                 box-shadow: 100vmin 10vmin 2em -80px #FFF7;
