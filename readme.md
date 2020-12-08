@@ -30,4 +30,6 @@ The neat 3d text was from Sarah Fossheim's [article](https://css-tricks.com/crea
 Thinking about simulating atmospheric scattering by altitude as you scroll; as if the pane is taking off...
  - https://www.scratchapixel.com/lessons/procedural-generation-virtual-worlds/simulating-sky
 
- https://www.faa.gov/licenses_certificates/
+  - FAA site; https://www.faa.gov/licenses_certificates/
+
+  - This is interesting; https://css-tricks.com/text-effects-css-little-contenteditable-trick/
