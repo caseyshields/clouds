@@ -11,16 +11,15 @@
 
 /* */
 main {
-    /* thanks jrl.ninja */
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:#ffee96;
+}
+header, section {
     max-width: 38rem;
     padding: 2rem;
     margin: auto;
     padding-bottom: 0;
-
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    /* font-family: bahnschrift; */
-    color:#ffee96;
-}
+}/* thanks jrl.ninja */
 header {
     position: sticky;
     top: 0;
@@ -32,14 +31,16 @@ footer {
 }
 h1 {
     font-style: bold, italic;
-    text-shadow: #f57536 1px 1px, #f57536 2px 2px, #f57536 3px 3px, #f57536 4px 4px;
-    font-size: 3em;
-    z-index: 100;
+    text-shadow: #f57536 1px 1px, #f57536 2px 2px, #f57536 3px 3px, #f57536 4px 4px, #f57536 5px 5px, #f57536 6px 6px;
+    font-size: 4em;
 }
 h2 {
-    font-style: italic;
-    text-shadow: #f57536 1px 1px, #f57536 2px 2px;
-    z-index: 100;
+    font-style: bold, italic;
+    text-shadow: #f57536 1px 1px, #f57536 2px 2px, #f57536 3px 3px, #f57536 4px 4px;
+    font-size: 2em;
+}
+p, ul {
+    font-size: 1.5em;
 }
 body {
     /* width: 100vw; */
@@ -92,7 +93,7 @@ path {
     border-radius: 50%;
     width: var(--cloud-size);
     height: calc( var(--cloud-size) * 0.5);
-    position: fixed;
+    position: absolute;
     top: 10vw;
     /* left: calc( var(--cloud-size) * -1.0); */
     /*- 100vw ); */
