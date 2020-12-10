@@ -1,0 +1,139 @@
+/* Cloud parameters */
+:root {
+    --cloud-size: 40vw;
+    --cloud-period: 45000ms;
+    --cloud-fluffy: 2em;
+    --cloud-bright: #FFFF;
+    --cloud-dim: #5557;
+    /* --cloud-dim: #ffee96ff;
+    --cloud-bright: #f5753677; */
+}
+
+/* */
+main {
+    /* thanks jrl.ninja */
+    max-width: 38rem;
+    padding: 2rem;
+    margin: auto;
+    padding-bottom: 0;
+
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    /* font-family: bahnschrift; */
+    color:#ffee96;
+}
+header {
+    position: sticky;
+    top: 0;
+    right: 0;
+    margin-bottom: 10em;
+}
+footer {
+    overflow: hidden;
+}
+h1 {
+    font-style: bold, italic;
+    text-shadow: #f57536 1px 1px, #f57536 2px 2px, #f57536 3px 3px, #f57536 4px 4px;
+    font-size: 3em;
+    z-index: 100;
+}
+h2 {
+    font-style: italic;
+    text-shadow: #f57536 1px 1px, #f57536 2px 2px;
+    z-index: 100;
+}
+body {
+    /* width: 100vw; */
+    background: linear-gradient(180deg,
+        #2d282e 0%,
+        #215c9a 20%,
+        #2791d5 30%,
+        #4fa7e2 50%,
+        #f3f5f9 60%,
+        #f5f7f7 80%,
+        #ffee96 85%,
+        #f6b65e 90%,
+        #f57536 95%,
+        #2d282e 100%
+    );
+    overflow-x: hidden;
+}
+
+/* SVG stuff */
+.flying {
+    width: 40vw;
+    height: auto;
+    position: absolute;
+    right: 20vw;
+    top: 20vw;
+}
+.flying {
+    width: 40vw;
+    height: auto;
+    z-index: 1000;
+}
+.landed {
+    width: 80vw;
+    height: auto;
+    position: relative;
+    right: -15vw;
+    bottom: -4vh;
+}
+textPath {
+    fill : #ffee96;
+}
+path {
+    fill: none;
+    stroke: #ffee96;
+}
+
+/* The CSS part of the procedural single div cloud stuff */
+/* Fair warning; these clouds hate your CPU and all it's little baby GPU cores. */
+.cloud {
+    border-radius: 50%;
+    width: var(--cloud-size);
+    height: calc( var(--cloud-size) * 0.5);
+    position: fixed;
+    top: 10vw;
+    /* left: calc( var(--cloud-size) * -1.0); */
+    /*- 100vw ); */
+    z-index: 0;
+    background-color: transparent;
+}
+.light {
+    box-shadow: 100vw 0vw 2em 0px #FFF;
+    filter: url(#cloud-light);
+    animation-duration: var(--cloud-period);
+    animation-name: drift;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes drift {
+    from {
+        box-shadow: 50vw 0vw 2em 0px var(--cloud-bright);
+        left: -50vw;
+        /* left: calc( var(--cloud-size) * -1.0 ); */
+    }
+    to {
+        box-shadow: 100vw 0vw 2em 0px var(--cloud-bright);
+        left: 0vw;
+        /* left: calc( 70vw + var(--cloud-size) ); */
+    }
+}
+.dim {
+    /* box-shadow: 100vw 5vw 2em -60px #7777; */
+    filter: url(#cloud-dim);
+    animation-duration: var(--cloud-period);
+    animation-name: dim-drift;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes dim-drift {
+    from {
+        box-shadow: 50vw 5vw 2em -60px var(--cloud-dim);
+        left: -50vw;
+    }
+    to {
+        box-shadow: 100vw 5vw 2em -60px var(--cloud-dim);
+        left: 0vw
+    }
+}
