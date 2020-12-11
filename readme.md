@@ -31,3 +31,13 @@ Thinking about simulating atmospheric scattering by altitude as you scroll; as i
  - https://www.scratchapixel.com/lessons/procedural-generation-virtual-worlds/simulating-sky
 
  https://www.faa.gov/licenses_certificates/
+
+  - this kind of thing might be good for the mission quote;
+    - https://css-tricks.com/using-css-to-set-text-inside-a-circle/
+    - https://css-tricks.com/snippets/svg/curved-text-along-path/
+
+  - here's an approach for the map;
+    - https://codepen.io/jakobfuchs/pen/DyAto
+    - this is only for switzerland, but worth looking at the api;
+      - https://codepen.io/cedricmoullet/pen/AwuIK
+      - https://www.swisstopo.admin.ch/en/home.html
