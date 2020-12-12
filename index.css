@@ -14,72 +14,12 @@ html {
     color:#ffee96;
     
 }
-section {
-    max-width: 38rem;
-    padding: 2rem;
-    margin: auto;
-    padding-bottom: 0;
-}/* thanks jrl.ninja */
-
-/* header */
-header {
-    width: 100%;
-    height: 100vh;
-}
-header > div.title {
-    position: sticky;
-    top: 25vh;
-    margin-left: 20vw; /* left: 20vw; */
-    z-index: 2;
-}
-/* add cloud in front */
-header img {
-    position:absolute;
-    top: 40vh;
-    left: 40vw;
-    z-index: 4;
-    width: 40vw;
-    height: auto;
-    animation-duration: 5000ms;
-    animation-name: floating;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    animation-direction: alternate-reverse;
-}
-@keyframes floating {
-    from {top: 40vh;}
-    50% {top: 42vh;}
-    to {top: 40vh;}
-}
-/* add cloud in back */
-
-/* mission statement */
-section#mission > p {
-    /* border-radius: 50%;
-    color: #2d282e;
-    background-color: #ffee96;
-    border-color: #f57536;
-    border-style: solid;
-    border-width: 0 1rem 1rem 0; */
-    position: relative;
-    left: 0;
-    top:0;
-    width:40%;
-    z-index: 2;
-}
-section#mission > img {
-    position: relative;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
-
-}
 textPath {
-    fill : #f57536;
+    fill : #ffee96;
 }
 path {
     fill: none;
-    stroke: #f57536;
+    stroke: #ffee96;
 }
 
 h1 {
@@ -103,7 +43,11 @@ h2 {
         #f57536 4px 4px;
 }
 p, ul {
-    font-size: 1.5em;
+    font-size: 1.25em;
+    /* max-width: 40rem;
+    padding: 2rem;
+    margin: auto;
+    padding-bottom: 0; */
 }
 body {
     /* width: 100vw; */
@@ -121,6 +65,96 @@ body {
     );
     scroll-behavior: smooth;
     overflow-x: hidden;
+}
+/* section {
+    max-width: 40rem;
+    padding: 2rem;
+    margin: auto;
+    padding-bottom: 0;
+} */ /* thanks jrl.ninja */
+
+/* header */
+header {
+    width: 100%;
+    height: 100vh;
+}
+header > div.title {
+    position: sticky;
+    top: 15vh;
+    margin-left: 20vw; /* left: 20vw; */
+    z-index: 2;
+}
+/* add cloud in front */
+header img {
+    position: absolute;
+    top: 40vh;
+    left: 40vw;
+    z-index: 4;
+    width: 40vw;
+    height: auto;
+    animation-duration: 5000ms;
+    animation-name: floating;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate-reverse;
+}
+@keyframes floating {
+    from {margin-top: 0vh;}
+    50% {margin-top: 2vh;}
+    to {margin-top: 0vh;}
+}
+/* add cloud in back */
+
+/* make all sections positioned, so the contents can be placed within them*/
+section {
+    position: relative;
+}
+
+/* mission statement */
+section#mission {
+    width: 100vw;
+    height: 50vh;
+}
+section#mission > p {
+    /* border-radius: 50%; */
+    color: #2d282e;
+    background-color: #ffee96;
+    border-color:#f57536;
+    /* background-color: var(--cloud-bright);
+    border-color: var(--cloud-dim); */
+    border-style: solid;
+    border-width: 0 0.5rem 0.5rem 0;
+    border-radius: 2em;
+    padding: 1em;
+    
+    position: absolute;
+    left: 30vw;
+    top: 15vh;
+    width: 50vw;
+    z-index: 1;
+}
+section#mission > img {
+    position: absolute;
+    left: 5vw;
+    top: 0vh;
+    width: 40vw;
+    z-index: 2;
+
+    animation-duration: 5000ms;
+    animation-name: floating;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate-reverse;
+}
+
+section#certifications {
+
+}
+section#certifications > svg {
+    position: relative;
+    left: 20vw;
+    width: 40vw;
+    height: auto;
 }
 
 footer {
@@ -141,9 +175,7 @@ footer > img {
     width: var(--cloud-size);
     height: calc( var(--cloud-size) * 0.5);
     position: absolute;
-    top: 40vw;
-    /* left: calc( var(--cloud-size) * -1.0); */
-    /*- 100vw ); */
+    top: 50vh;
     z-index: 0;
     background-color: transparent;
 }
@@ -155,33 +187,31 @@ footer > img {
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
+.dim {
+    filter: url(#cloud-dim);
+    animation-name: dim-drift;
+    animation-duration: var(--cloud-period);
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    /* animation-play-state: ; */
+}
 @keyframes drift {
     from {
-        box-shadow: 50vw 0vw 2em 0px var(--cloud-bright);
-        left: -50vw;
-        /* left: calc( var(--cloud-size) * -1.0 ); */
+        box-shadow: 100vw 0vw 2em 0px var(--cloud-bright);
+        left: calc( (var(--cloud-size) + 100vw) * -1.0 );
     }
     to {
-        box-shadow: 100vw 0vw 2em 0px var(--cloud-bright);
-        left: 0vw;
-        /* left: calc( 70vw + var(--cloud-size) ); */
+        box-shadow: 150vw 0vw 2em 0px var(--cloud-bright);
+        left: calc( -50vw + var(--cloud-size) );
     }
-}
-.dim {
-    /* box-shadow: 100vw 5vw 2em -60px #7777; */
-    filter: url(#cloud-dim);
-    animation-duration: var(--cloud-period);
-    animation-name: dim-drift;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
 }
 @keyframes dim-drift {
     from {
-        box-shadow: 50vw 5vw 2em -60px var(--cloud-dim);
-        left: -50vw;
+        box-shadow: 100vw 5vw 2em -60px var(--cloud-dim);
+        left: calc( (var(--cloud-size) + 100vw) * -1.0 );
     }
     to {
-        box-shadow: 100vw 5vw 2em -60px var(--cloud-dim);
-        left: 0vw
+        box-shadow: 150vw 5vw 2em -60px var(--cloud-dim);
+        left: calc( -50vw + var(--cloud-size) );
     }
 }
