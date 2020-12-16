@@ -5,18 +5,19 @@
         <title>Cloud</title>
         <style>
             :root {
-                --cloud-size: 50vw;
+                --cloud-width: 50vw;
+                --cloud-height: 25vw;
                 --cloud-period: 45000ms;
                 --cloud-fluffy: 2em;
-                --cloud-bright: #FFFF;
-                --cloud-dim: #5557;
+                --cloud-bright: #FFF;
+                --cloud-dim: #AAA;
             }
             main {
                 position: fixed;
-                top:0;
-                left:0;
-                height:100vh;
-                width:100vw;
+                top: 0;
+                left: 0;
+                height: 100vh;
+                width: 100vw;
                 background: linear-gradient(180deg,
                     #2d282e 0%,
                     #215c9a 40%,
@@ -27,10 +28,10 @@
             /* Fair warning; these clouds hate your CPU and all it's little baby GPU cores. */
             .cloud {
                 position: absolute;
-                top: 40vh;
+                top: calc( (100vh - var(--cloud-height) ) * 0.5 );
+                width: var(--cloud-width);
+                height: calc( var(--cloud-width) * 0.5);
                 z-index: 0;
-                width: var(--cloud-size);
-                height: calc( var(--cloud-size) * 0.5);
                 border-radius: 50%;
                 background-color: transparent;
             }
@@ -53,21 +54,21 @@
             @keyframes drift {
                 from {
                     box-shadow: 100vw 0vw 2em 0px var(--cloud-bright);
-                    left: calc( (var(--cloud-size) + 100vw) * -1.0 );
+                    left: calc( (var(--cloud-width) + 100vw) * -1.0 );
                 }
                 to {
                     box-shadow: 150vw 0vw 2em 0px var(--cloud-bright);
-                    left: calc( -50vw + var(--cloud-size) );
+                    left: calc( -90vw + var(--cloud-width) );
                 }
             }
             @keyframes dim-drift {
                 from {
                     box-shadow: 100vw 5vw 2em -60px var(--cloud-dim);
-                    left: calc( (var(--cloud-size) + 100vw) * -1.0 );
+                    left: calc( (var(--cloud-width) + 100vw) * -1.0 );
                 }
                 to {
                     box-shadow: 150vw 5vw 2em -60px var(--cloud-dim);
-                    left: calc( -50vw + var(--cloud-size) );
+                    left: calc( -90vw + var(--cloud-width) );
                 }
             }
         </style>
@@ -82,7 +83,7 @@
                     <feDisplacementMap in="SourceGraphic" scale="170" />
                 </filter>
                 <filter id="cloud-dim">
-                    <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="2" seed="4"/>
+                    <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="3" seed="4"/>
                     <feDisplacementMap in="SourceGraphic" scale="150" />
                 </filter>
                 <filter id="cloud-dark">
