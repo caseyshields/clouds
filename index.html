@@ -3,27 +3,9 @@
     <head>
         <meta charset="utf-8">
         <title>Clouds</title>
-        <script src="../d3/d3.min.js"></script>
-        <link href="index.css" rel="stylesheet"></style>
+        <!-- <script src="../d3/d3.min.js"></script> -->
+        <link href="index.css" rel="stylesheet"></link>
     </head>
-
-    <svg width="0" height="0"> 
-        <filter id="cloud-light">
-            <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="4" seed="4"/>
-            <feDisplacementMap in="SourceGraphic" scale="170" />
-        </filter>
-        <filter id="cloud-dim">
-            <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="2" seed="4"/>
-            <feDisplacementMap in="SourceGraphic" scale="150" />
-        </filter>
-        <filter id="cloud-dark">
-            <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="1" seed="4"/>
-            <feDisplacementMap in="SourceGraphic" scale="100" />
-        </filter>
-    </svg>
-    
-
-
     <main>
         <header>
             <div class="title">
@@ -37,81 +19,29 @@
                 <image src="cessna-172-skyhawk.svg"></image>
             </a>
         </header>
-                
-        <section id="mission">
-            <!-- <h2>Mission</h2> -->
-            <p> A blurb here about how ben thinks about flying.
-                He's had a lifelong fascination with flying.
-                Not just the particulars of the science and skill of piloting, which we've had long conversations about-
-                But also the pure joy of being among sunlit clouds.
-                He want to share this with as many people as possible, as safely as possible.
-            </p>
-            <image src="piper-PA28-181-archer.svg"></image>
+    
+        <section class="cred">
         </section>
 
-        <section id="certifications">
-            <h2>Certifications</h2>
-            <svg viewBox="0 0 256 256">
-
-                <path id="uppercircle" d="M 16,128 A 40 40 0 0 1 240, 128"></path>
-                <text x="0" y="20" textLength="100%">
-                    <textPath href="#uppercircle" lengthAdjust="spacing">
-                        Certified Flight Instrument Instructor
-                    </textPath>
-                </text>
-                
-                <image 
-                    x="0", y="0",
-                    width="100%", height="100%",
-                    preserveAspectRatio="xMidYMid",
-                    href="piper-pa-44-seminole.svg">
-
-                </image>
-                
-                <path id="lowercircle" d="M 240,128 A 40 40 0 1 1 16,128"></path>
-                <text x="0" y="20" textLength="100%">
-                    <textPath href="#lowercircle" lengthAdjust="spacing">
-                        MEI Multi-Engine Instructor
-                    </textPath>
-                </text>
-            </svg>
-            
-            <!--<svg viewBox="0 0 512 512">
-
-                <path id="uppercircle" d="M 32,256 A 80 80 45 0 1 480, 256"></path>
-                <text x="0" y="20" textLength="100%">
-                    <textPath href="#uppercircle" lengthAdjust="spacing">
-                        Certified Flight Instrument Instructor
-                    </textPath>
-                </text>
-                
-                <image 
-                    x="0", y="0",
-                    width="100%", height="100%",
-                    preserveAspectRatio="xMidYMid",
-                    href="piper-pa-44-seminole.svg">
-
-                </image>
-                
-                <path id="lowercircle" d="M 480,256 A 80 80 45 1 1 32,256"></path>
-                <text x="0" y="20" textLength="100%">
-                    <textPath href="#lowercircle" lengthAdjust="spacing">
-                        MEI Multi-Engine Instructor
-                    </textPath>
-                </text>
-            </svg>-->
-
-            <!-- <ul>
+        <section id="mission">
+            <!-- <h2>Mission</h2> -->
+            <ul>
+                <!-- <li><h2>CFI</h2></li>
+                <li><h2>CFII</h2></li>
+                <li><h2>MEI</h2></li> -->
                 <li>Commercial Pilot</li>
                 <li>Instrument Rated</li>
                 <li>Multi-Engine Rated</li>
                 <li>CFI Certified Flight Instructor</li>
                 <li>CFII Certified Flight Instrument Instructor</li>
                 <li>MEI Multi-Engine Instructor</li>
-            </ul> -->
-        </section>
-
-        <section id="contact">
+            </ul>
+            <p> A blurb here about how ben thinks about flying.
+                He's had a lifelong fascination with flying.
+                Not just the particulars of the science and skill of piloting, which we've had long conversations about-
+                But also the pure joy of being among sunlit clouds.
+                He want to share this with as many people as possible, as safely as possible.
+            </p>
             <h2>Contact</h2>
             <ul>
                 <li>TODO business phone, google number?</li>
@@ -119,12 +49,25 @@
             </ul>
             <h2>Home Airport</h2>
             <p>TODO embed open map directions or something...</p>
+            <image src="piper-PA28-181-archer.svg"></image>
+            <image src="piper-pa-44-seminole.svg"></image>
         </section>
     </main>
 
     <footer>
         <image src="piper-j3-cub.svg" ></image>
     </footer>
+
+    <svg width="0" height="0"> 
+        <filter id="cloud-light">
+            <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="4" seed="4"/>
+            <feDisplacementMap in="SourceGraphic" scale="170" />
+        </filter>
+        <filter id="cloud-dim">
+            <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="2" seed="4"/>
+            <feDisplacementMap in="SourceGraphic" scale="150" />
+        </filter>
+    </svg>
 
     <script type="module">
         //
