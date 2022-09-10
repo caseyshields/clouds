@@ -21,22 +21,76 @@
     </header>
 
     <main>
-        
         <section id="mission">
-            <h2>About</h2>
-            <div> A blurb here about how ben thinks about flying.
-                He's had a lifelong fascination with flying.
-                Not just the particulars of the science and skill of piloting, which we've had long conversations about-
-                But also the joy of being among sunlit clouds.
-                He want to share this with as many people as possible, as safely as possible.
-            </div>
-            <image src="piper-pa-44-seminole.svg"></image>
+            <span>
+                <h2>About</h2>
+                <p>
+                    Blurb describing Ben; USAF retired, Civil Engineering.
+                    He's had a lifelong fascination with flying.
+                    Not just the particulars of the science and skill of piloting, which we've had long conversations about-
+                    But also the joy of being among sunlit clouds.
+                    He want to share this with as many people as possible, as safely as possible.
+                </p>
+            </span>
+            <!-- <image src="piper-pa-44-seminole.svg"></image> -->
+            <svg viewBox="0 0 256 256">
+
+                <path id="uppercircle" d="M 16,128 A 40 40 0 0 1 240, 128"></path>
+                <text x="0" y="20" textLength="100%">
+                    <textPath href="#uppercircle" lengthAdjust="spacing">
+                        Piper PA-44 Seminole
+                    </textPath>
+                </text>
+                
+                <image 
+                    x="0", y="0",
+                    width="100%", height="100%",
+                    preserveAspectRatio="xMidYMid",
+                    href="piper-pa-44-seminole.svg">
+
+                </image>
+                
+                <path id="lowercircle" d="M 240,128 A 40 40 0 1 1 16,128"></path>
+                <text x="0" y="20" textLength="100%">
+                    <textPath href="#lowercircle" lengthAdjust="spacing">
+                        <!-- MEI Multi-Engine Instructor -->
+                        Piper PA-44 Seminole
+                    </textPath>
+                </text>
+            </svg>
         </section>
     
-        <section id="credentials">
-            <h2>Ratings</h2>
-            <image src="piper-PA28-181-archer.svg"></image>
-            <div>
+        <section id="ratings">
+            <!-- <image src="piper-PA28-181-archer.svg"></image> -->
+            <svg viewBox="0 0 256 256">
+
+                <path id="uppercircle" d="M 16,128 A 40 40 0 0 1 240, 128"></path>
+                
+                <path id="uppercircle" d="M 16,128 A 40 40 0 0 1 240, 128"></path>
+                <text x="0" y="20" textLength="100%">
+                    <textPath href="#uppercircle" lengthAdjust="spacing">
+                        Piper PA28-181 Archer
+                    </textPath>
+                </text>
+                
+                <image 
+                    x="0", y="0",
+                    width="100%", height="100%",
+                    preserveAspectRatio="xMidYMid",
+                    href="piper-PA28-181-archer.svg">
+
+                </image>
+                
+                <path id="lowercircle" d="M 240,128 A 40 40 0 1 1 16,128"></path>
+                <text x="0" y="20" textLength="100%">
+                    <textPath href="#lowercircle" lengthAdjust="spacing">
+                        <!-- MEI Multi-Engine Instructor -->
+                        Piper PA28-181 Archer
+                    </textPath>
+                </text>
+            </svg>
+            <span>
+                <h2>Ratings</h2>
                 <ul>
                     <li>Commercial Pilot</li>
                     <li>Instrument Rated</li>
@@ -45,16 +99,13 @@
                     <li>CFII Certified Flight Instrument Instructor</li>
                     <li>MEI Multi-Engine Instructor</li>
                 </ul>
-            </div>
+            </span>
         </section>
 
         <section id="contact">
-            <h2>Contact</h2>
             <div>
-                <ul>
-                    <li>TODO business phone, google number?</li>
-                    <li>TODO business email</li>
-                </ul>
+                <h2>Contact</h2>
+                <p>TODO business phone, google number, business email</p>
             </div>
             <!-- <h2>Home Airport</h2>
             <p>TODO embed open map directions or something...</p> -->
