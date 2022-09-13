@@ -1,10 +1,4 @@
-# ignore vscode files
-/.vs
-
-# ignore reference images
-/ref
-
-# ignore scratch examples
+# ignore reference images and scratch examples
 /examples
 
 # ignore express server
