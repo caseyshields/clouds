@@ -1,11 +1,11 @@
 # ignore vscode files
 /.vs
 
-# Ignore 3rd party libraries
-/d3
-
-#ignore reference images
+# ignore reference images
 /ref
+
+# ignore scratch examples
+/examples
 
 # ignore express server
 server.js
