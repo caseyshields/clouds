@@ -2,8 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Clouds</title>
-        <!-- <script src="../d3/d3.min.js"></script> -->
+        <title>Ben Shields</title>
         <link href="index.css" rel="stylesheet"></link>
     </head>
 
@@ -12,12 +11,9 @@
             <h1>Ben Shields</h1>
             <h2>Flight Instructor</h2>
         </div>
-        
         <div class="cloud light"></div>
         <div class="cloud dim"></div>
-        <a href="#mission">
-            <image src="cessna-172-skyhawk.svg"></image>
-        </a>
+        <image src="cessna-172-skyhawk.svg"></image>
     </header>
 
     <main>
@@ -32,43 +28,13 @@
                     He want to share this with as many people as possible, as safely as possible.
                 </p>
             </span>
-            <!-- <image src="piper-pa-44-seminole.svg"></image> -->
-            <svg viewBox="0 0 256 256">
 
-                <path id="uppercircle" d="M 16,128 A 40 40 0 0 1 240, 128"></path>
-                <text x="0" y="20" textLength="100%">
-                    <textPath href="#uppercircle" lengthAdjust="spacing">
-                        Piper PA-44 Seminole
-                    </textPath>
-                </text>
-                
-                <image 
-                    x="0", y="0",
-                    width="100%", height="100%",
-                    preserveAspectRatio="xMidYMid",
-                    href="piper-pa-44-seminole.svg">
-
-                </image>
-                
-                <path id="lowercircle" d="M 240,128 A 40 40 0 1 1 16,128"></path>
-                <text x="0" y="20" textLength="100%">
-                    <textPath href="#lowercircle" lengthAdjust="spacing">
-                        <!-- MEI Multi-Engine Instructor -->
-                        Piper PA-44 Seminole
-                    </textPath>
-                </text>
-            </svg>
-        </section>
-    
-        <section id="ratings">
             <!-- <image src="piper-PA28-181-archer.svg"></image> -->
             <svg viewBox="0 0 256 256">
 
-                <path id="uppercircle" d="M 16,128 A 40 40 0 0 1 240, 128"></path>
-                
-                <path id="uppercircle" d="M 16,128 A 40 40 0 0 1 240, 128"></path>
+                <path id="rightcircle" d="M 128,16 A 40 40 0 0 1 128, 240"></path>
                 <text x="0" y="20" textLength="100%">
-                    <textPath href="#uppercircle" lengthAdjust="spacing">
+                    <textPath href="#rightcircle" lengthAdjust="spacing">
                         Piper PA28-181 Archer
                     </textPath>
                 </text>
@@ -81,14 +47,39 @@
 
                 </image>
                 
-                <path id="lowercircle" d="M 240,128 A 40 40 0 1 1 16,128"></path>
+                <path id="leftcircle" d="M 128,240 A 40 40 0 0 1 128, 16"></path>
                 <text x="0" y="20" textLength="100%">
-                    <textPath href="#lowercircle" lengthAdjust="spacing">
-                        <!-- MEI Multi-Engine Instructor -->
+                    <textPath href="#leftcircle" lengthAdjust="spacing">
                         Piper PA28-181 Archer
                     </textPath>
                 </text>
+                <!-- TODO Split the image instead of the circle so you can rotate the text freely... -->
             </svg>
+        </section>
+    
+        <section id="ratings">
+            <!-- <image src="piper-pa-44-seminole.svg"></image> -->
+            <svg viewBox="0 0 256 256">
+                <path id="uppercircle" d="M 16,128 A 40 40 0 0 1 240, 128"></path>
+                <text x="0" y="20" textLength="100%">
+                    <textPath href="#uppercircle" lengthAdjust="spacing">
+                        Piper PA-44 Seminole
+                    </textPath>
+                </text>
+                <image 
+                    x="0", y="0",
+                    width="100%", height="100%",
+                    preserveAspectRatio="xMidYMid",
+                    href="piper-pa-44-seminole.svg">
+                </image>
+                <path id="lowercircle" d="M 240,128 A 40 40 0 1 1 16,128"></path>
+                <text x="0" y="20" textLength="100%">
+                    <textPath href="#lowercircle" lengthAdjust="spacing">
+                        Piper PA-44 Seminole
+                    </textPath>
+                </text>
+            </svg>
+
             <span>
                 <h2>Ratings</h2>
                 <ul>

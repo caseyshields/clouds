@@ -1,6 +1,6 @@
 /* Cloud parameters */
 :root {
-    --cloud-size: 50vw;
+    --cloud-size: 50em;
     --cloud-period: 45000ms;
     --cloud-fluffy: 2em;
     --cloud-bright: #FFF;
