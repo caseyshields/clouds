@@ -1,0 +1,12 @@
+pages:
+  stage: deploy
+  script:
+  - mkdir .public
+  - cp ./index.html ./index.css .public
+  - cp ./piper-j3-cub.svg cessna-172-skyhawk.svg piper-pa-44-seminole.svg piper-PA28-181-archer.svg .public
+  - mv .public public
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
